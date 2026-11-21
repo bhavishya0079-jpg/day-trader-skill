@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day Trader Skill</title>
+  <meta name="description" content="Day Trader Skill is an open-source Python toolkit of 11 Claude skills for market data, chart scanning, news monitoring, risk checks and backtesting. Paper trading by default.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #080d18;
+      color: #f4f7ff;
+      line-height: 1.6;
+    }
+
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      padding: 22px 8%;
+      border-bottom: 1px solid #1b263a;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: #72e6bb;
+    }
+
+    nav a {
+      color: #c4cde0;
+      text-decoration: none;
+      margin-left: 22px;
+      font-size: 14px;
+    }
+
+    a:focus-visible,
+    .btn:focus-visible {
+      outline: 2px solid #72e6bb;
+      outline-offset: 3px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 90px 20px 75px;
+      background: radial-gradient(circle at top, #172641, #080d18 65%);
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 8px 14px;
+      border: 1px solid #2c4c51;
+      border-radius: 30px;
+      color: #72e6bb;
+      font-size: 13px;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 7vw, 68px);
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: #72e6bb;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: auto;
+      color: #aab8ce;
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    .buttons {
+      margin-top: 32px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 23px;
+      border-radius: 9px;
+      text-decoration: none;
+      margin: 6px;
+      font-weight: bold;
+    }
+
+    .primary {
+      background: #72e6bb;
+      color: #08131c;
+    }
+
+    .secondary {
+      border: 1px solid #35445c;
+      color: white;
+    }
+
+    section {
+      padding: 65px 8%;
+    }
+
+    .section-title {
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .section-desc {
+      color: #aab8ce;
+      line-height: 1.7;
+      margin-bottom: 32px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: #101a2b;
+      border: 1px solid #1e2b41;
+      padding: 24px;
+      border-radius: 14px;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: #72e6bb;
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+      color: #72e6bb;
+    }
+
+    .card p {
+      color: #aab8ce;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .about {
+      background: #0c1422;
+    }
+
+    .about-box {
+      background: #101a2b;
+      border: 1px solid #1e2b41;
+      border-radius: 14px;
+      padding: 30px;
+      line-height: 1.8;
+      color: #b9c5d8;
+    }
+
+    .about-box p + p {
+      margin-top: 16px;
+    }
+
+    footer {
+      border-top: 1px solid #1b263a;
+      text-align: center;
+      padding: 28px 15px;
+      color: #8391a9;
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 18px 5%;
+      }
+
+      nav a {
+        margin-left: 10px;
+        font-size: 12px;
+      }
+
+      section {
+        padding: 48px 5%;
+      }
+
+      .hero {
+        padding-top: 65px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+      .card {
+        transition: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">DayTrader.</div>
+    <nav>
+      <a href="#tools">Tools</a>
+      <a href="#about">About</a>
+      <a href="https://github.com/Jakeschincariol/day-trader-skill" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="tag">Open Source Project</div>
+      <h1>Market Research.<br><span>Made Smarter.</span></h1>
+      <p>
+        A free, open-source set of 11 Claude skills and Python tools for market data,
+        chart scanning, news monitoring, risk checks and trade simulation.
+        Paper trading is the default.
+      </p>
+
+      <div class="buttons">
+        <a href="#tools" class="btn primary">Explore Tools</a>
+        <a href="https://github.com/Jakeschincariol/day-trader-skill" target="_blank" rel="noopener noreferrer" class="btn secondary">View on GitHub</a>
+      </div>
+    </section>
+
+    <section id="tools">
+      <h2 class="section-title">Project Toolkit</h2>
+      <p class="section-desc">
+        The 11 modules included in the Day Trader Skill project.
+      </p>
+
+      <div class="cards">
+
+        <div class="card">
+          <h3>Chart Scanner</h3>
+          <p>Scans many charts for setups such as opening-range breakouts, flags and oversold bounces.</p>
+        </div>
+
+        <div class="card">
+          <h3>News Monitor</h3>
+          <p>Tracks breaking news on the stocks you watch and flags items that may move the price.</p>
+        </div>
+
+        <div class="card">
+          <h3>Entry Timer</h3>
+          <p>Watches a setup bar by bar and reports when the entry condition is triggered.</p>
+        </div>
+
+        <div class="card">
+          <h3>Exit Planner</h3>
+          <p>Sets a stop and a target before entry, so the exit plan is defined in advance.</p>
+        </div>
+
+        <div class="card">
+          <h3>Time Machine</h3>
+          <p>Simulates possible outcomes of a trade from past price data before any money is risked.</p>
+        </div>
+
+        <div class="card">
+          <h3>Risk Manager</h3>
+          <p>Checks each trade against limits such as max loss, daily loss and position size, returning PASS or BLOCK.</p>
+        </div>
+
+        <div class="card">
+          <h3>Budget Manager</h3>
+          <p>Sizes each position to your budget and your maximum loss per trade.</p>
+        </div>
+
+        <div class="card">
+          <h3>Order Executor</h3>
+          <p>Prepares orders for your broker. Paper trading by default, and nothing is sent without your explicit confirmation.</p>
+        </div>
+
+        <div class="card">
+          <h3>Price Alerts</h3>
+          <p>Alerts you when a price, stop or target is reached.</p>
+        </div>
+
+        <div class="card">
+          <h3>Earnings Analyst</h3>
+          <p>Reads company earnings reports and summarizes what changed.</p>
+        </div>
+
+        <div class="card">
+          <h3>Pelosi Tracker</h3>
+          <p>Reads publicly filed congressional stock-trade disclosures as they are published.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <h2 class="section-title">About the Project</h2>
+      <div class="about-box">
+        <p>
+          Day Trader Skill is an open-source project (MIT license) written in Python.
+          It uses publicly available data such as Yahoo Finance charts, Nasdaq Trader
+          symbol lists, SEC EDGAR filings and the House Clerk's disclosures.
+        </p>
+        <p>
+          Nothing in this project can place an order on its own. Every trade needs your
+          explicit approval, and paper trading is the default.
+        </p>
+        <p>
+          This website is an informational project page. It does not provide personalized
+          financial advice or guarantee results. Market data can be delayed, inaccurate
+          or incomplete. Always do your own research before making any trading decision.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Day Trader Skill — Open Source Project</p>
+    <p>Educational & informational use only. No financial advice.</p>
+    <p>© 2026 Day Trader Skill</p>
+  </footer>
+
+</body>
+</html>
